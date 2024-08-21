@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+:root {
+  --Almost-White: hsl(0, 0%, 98%);
+  --Medium-Gray: hsl(0, 0%, 41%);
+  --Almost-Black: hsl(0, 0%, 8%);
+}
+* {
+  font-family: "Epilogue", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+img {
+  max-width: 100%;
+}
+
+.btn-outlined,
+.btn-transparent {
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  color: var(--Medium-Gray);
+  cursor: pointer;
+  background-color: transparent;
+}
+.btn-transparent {
+  border: none;
+}
+.btn-transparent:hover {
+  color: var(--Almost-Black);
+  font-weight: 700;
+}
+.btn-outlined {
+  border: 1px solid var(--Almost-Black);
+}
+.btn-outlined:hover {
+  color: var(--Almost-Black);
+  font-weight: 700;
+}
+.btn-primario {
+  background-color: var(--Almost-Black);
+  width: fit-content;
+  padding: 1rem 2rem;
+  color: var(--Almost-White);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn-primario:hover {
+  background-color: var(--Almost-White);
+  border: 1px solid var(--Almost-Black);
+  color: var(--Almost-Black);
+  font-weight: 700;
+}
+
+.navbar{
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.container-navbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 3rem;
+}
+.menu-esquerda {
+  display: flex;
+  align-items: center;
+}
+.links-navbar {
+  display: flex;
+  margin-left: 4rem;
+  list-style: none;
+  gap: 2.5rem;
+}
+.links-navbar li {
+  cursor: pointer;
+  color: var(--Medium-Gray);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  user-select: none;
+}
+.links-navbar li:hover {
+  color: var(--Almost-Black);
+}
+.btn-menu-mobile {
+  display: none;
+}
+.menu-mobile {
+  display: none;
+}
+.menu-secundario {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  gap: 1rem;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+  padding: 1rem;
+  border-radius: 10px;
+}
+.one {
+  bottom: -170px;
+  right: 0;
+}
+.two {
+  bottom: -136px;
+}
+.menu-secundario .link-secundario {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  gap: 0.5rem;
+}
+.active .arrow {
+  transform: rotate(180deg);
+  transition: 0.2s;
+}
+.active-menu {
+  display: flex !important;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px);
+}
+.container-principal {
+  display: grid;
+  max-width: 1100px;
+  gap: 5rem;
+  grid-template-columns: 1fr 1fr;
+}
+.conteudo-esquerda {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.headling-main {
+  font-size: 4rem;
+}
+.conteudo-principal {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--Medium-Gray);
+}
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 800px) {
+  .container-navbar {
+    padding-inline: 1rem;
+  }
+  .btn-menu-mobile {
+    display: flex;
+    cursor: pointer;
+    z-index: 999;
+  }
+  .menu-mobile {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 70%;
+    background-color: var(--Almost-White);
+    padding: 5rem 2rem;
+  }
+  .links-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+  }
+  .links-mobile li {
+    display: flex;
+    color: var(--Medium-Gray);
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .links-mobile li p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .mobile-secundario {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem;
+  }
+  .overflow {
+    background-color: black;
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    opacity: 0.7;
+  }
+  .links-navbar {
+    display: none;
+  }
+  .links-navbar {
+    display: none;
+  }
+  main {
+    align-items: flex-start;
+  }
+  .container-principal {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .conteudo-esquerda{
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+  .headling-main {
+    font-size: 2.2rem;
+  }
+  .headling-main br {
+    display: none;
+  }
+  .logos {
+    width: 100%;
+    padding-inline: 1rem;
+    flex-wrap: wrap;
+  }
+}
