@@ -98,7 +98,6 @@ img {
   display: none;
 }
 .menu-secundario {
-  display: none;
   flex-direction: column;
   position: absolute;
   background-color: white;
@@ -107,9 +106,16 @@ img {
   padding: 1rem;
   border-radius: 10px;
 }
+
+.fechado {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .one {
-  bottom: -170px;
+  /*bottom: -170px;*/
   right: 0;
+  top: 30px;
 }
 .two {
   bottom: -136px;
